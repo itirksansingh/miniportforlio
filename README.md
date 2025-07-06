@@ -72,7 +72,7 @@ Console projects can be compiled and run using a terminal or command line.
 
 ## 📸 Sneak Peek
 
-> Add screenshots of your homepage, project sections, or GIFs of CLI projects here!
+![image](https://github.com/user-attachments/assets/f0fad18a-64e2-4e97-82e2-2566ea4c6e89)
 
 ---
 
