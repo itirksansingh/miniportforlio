@@ -9,7 +9,7 @@
 This isn't just a list of projects — it's a digital museum of my learning journey 🎯  
 Each mini project represents a concept I cracked, a bug I squashed, or a curious experiment I explored.
 
-🔗 **[Live Website](https://itirksansingh/miniportfolio)**  
+🔗 **[Live Website](https://itirksansingh/miniportfolio.html)**  
 📁 **Organized by language** for clarity and quick browsing.
 
 ---
