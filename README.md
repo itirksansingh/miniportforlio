@@ -9,7 +9,7 @@
 This isn't just a list of projects — it's a digital museum of my learning journey 🎯  
 Each mini project represents a concept I cracked, a bug I squashed, or a curious experiment I explored.
 
-🔗 **[Live Website](https://yourusername.github.io/your-miniportfolio-repo)**  
+🔗 **[Live Website](https://itirksansingh/miniportfolio)**  
 📁 **Organized by language** for clarity and quick browsing.
 
 ---
@@ -81,7 +81,7 @@ This repo is my little archive of experiments that helped me fall in love with c
 ## 📬 Want to Connect?
 
 Let's grow together!  
-🌐 [LinkedIn](https://linkedin.com/in/yourprofile) • 🐙 [GitHub](https://github.com/yourusername)
+🌐 [LinkedIn](https://linkedin.com/in/yourprofile) • 🐙 [GitHub](https://github.com/itirksansingh)
 
 ---
 
