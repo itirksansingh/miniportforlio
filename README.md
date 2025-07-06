@@ -13,7 +13,7 @@ Each mini project represents a concept I cracked, a bug I squashed, or a curious
 
 🧑‍💻 A fun and personal collection of my curious mini projects, organized by language!
 
-🔗 [Live Website](https://itirksansingh.github.io/miniportfolio/)
+🔗 [Live Website](https://itirksnasingh.github.io/miniportfolio/)
  
 📁 **Organized by language** for clarity and quick browsing.
 
