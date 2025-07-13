@@ -86,10 +86,7 @@ This repo is my little archive of experiments that helped me fall in love with c
 ## 📬 Want to Connect?
 
 Let's grow together!  
-🌐 [LinkedIn](www.linkedin.com/in/
-itirksnasingh
-Vanity URL name
-) • 🐙 [GitHub](https://github.com/itirksnasingh)
+🌐 [LinkedIn](www.linkedin.com/in/itirksnasingh) • 🐙 [GitHub](https://github.com/itirksnasingh)
 
 ---
 
