@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamagotchi Pet Simulator – Java GUI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #30253e;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1em;
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.6em;
+      text-align: left;
+    }
+    th {
+      background-color: #c3c88c;
+    }
+    a {
+      color: #638872;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🐣 Tamagotchi Pet Simulator – Java GUI Edition</h1>
+
+<p>A fun and interactive <strong>Tamagotchi-style virtual pet game</strong> built using <strong>Java Swing</strong>. Feed, play, rest, or ignore your digital pet — but beware! If you neglect it, it might not survive.</p>
+
+<hr/>
+
+<h2>🎯 Project Goal</h2>
+<p>Simulate a virtual pet's lifecycle and mood using basic <strong>object-oriented programming</strong> concepts and a clean <strong>graphical user interface (GUI)</strong>.</p>
+
+<hr/>
+
+<h2>🧠 Concepts Used</h2>
+<table>
+  <tr>
+    <th>Java Concept</th>
+    <th>Usage</th>
+  </tr>
+  <tr><td>OOP (Classes, Objects)</td><td><code>Pet</code> class with encapsulated data and behavior</td></tr>
+  <tr><td>Inner Classes</td><td><code>Pet</code> is an inner class within <code>TamagotchiGUI</code></td></tr>
+  <tr><td>Swing GUI (JFrame, JButton, JLabel)</td><td>Used for building a functional GUI</td></tr>
+  <tr><td>Layout Managers (BorderLayout, GridLayout)</td><td>For organizing GUI components</td></tr>
+  <tr><td>Event Handling</td><td><code>ActionListener</code> to respond to button clicks</td></tr>
+  <tr><td>User Input</td><td><code>JOptionPane</code> for naming the pet</td></tr>
+  <tr><td>Conditional Logic</td><td>To handle game rules, death conditions, and actions</td></tr>
+  <tr><td>Method Abstraction</td><td>All pet actions are modularized into methods (<code>feed()</code>, <code>rest()</code>, etc.)</td></tr>
+</table>
+
+<hr/>
+
+<h2>🕹️ How to Play</h2>
+
+<ol>
+  <li><strong>Run the Program</strong><br/>
+    Make sure you have Java installed. Compile and run:
+    <pre><code>javac TamagotchiGUI.java
+java TamagotchiGUI</code></pre>
+  </li>
+  <li><strong>Name Your Pet</strong><br/>A dialog will prompt you to give your pet a name.</li>
+  <li><strong>Interact</strong><br/>Use the buttons to feed, play with, or rest your pet.</li>
+  <li><strong>Monitor Its Stats</strong>
+    <ul>
+      <li><strong>Hunger</strong> (0 = full, 10 = starving)</li>
+      <li><strong>Energy</strong></li>
+      <li><strong>Happiness</strong></li>
+      <li><strong>Age</strong> (in turns)</li>
+    </ul>
+  </li>
+  <li><strong>Game Over</strong><br/>If hunger reaches 10, happiness reaches 0, or energy drops to 0 — the pet dies.</li>
+</ol>
+
+<hr/>
+
+<h2>🧩 Game Logic Summary</h2>
+
+<ul>
+  <li><strong>Feed:</strong> Decreases hunger</li>
+  <li><strong>Play:</strong> Increases happiness, decreases energy</li>
+  <li><strong>Rest:</strong> Increases energy</li>
+  <li><strong>Skip:</strong> Time passes, pet stats decay</li>
+</ul>
+
+<p>After every action (even skipping), the pet ages and stats decay:</p>
+<ul>
+  <li>Hunger increases</li>
+  <li>Happiness and energy decrease</li>
+</ul>
+
+<p><strong>The game ends if:</strong></p>
+<ul>
+  <li>hunger ≥ 10</li>
+  <li>happiness ≤ 0</li>
+  <li>energy ≤ 0</li>
+</ul>
+
+<hr/>
+
+<h2>🖼️ Screenshot</h2>
+<p><em>(Add a screenshot.png below this if you have one)</em></p>
+<img src="tamagotchi1.png" alt="Tamagotchi GUI Screenshot"/>
+<img src="tamagotchi2.png" alt="Tamagotchi GUI Screenshot"/>
+<hr/>
+
+<h2>✨ Highlights</h2>
+<ul>
+  <li>Lightweight but polished GUI using pure Java (no external libraries)</li>
+  <li>Perfect beginner project to learn GUI, OOP, and logic structuring</li>
+  <li>Fun, nostalgic, and educational!</li>
+</ul>
+
+<h2>📁 File Info</h2>
+<ul>
+  <li><code>TamagotchiGUI.java</code>: Entire code including GUI and logic</li>
+  <li><code>screenshot.png</code>: Optional GUI preview</li>
+</ul>
+
+<h2>📌 What I Learned</h2>
+<ul>
+  <li>Building interactive GUI apps in Java using Swing</li>
+  <li>Writing clean object-oriented code</li>
+  <li>Designing event-driven logic</li>
+  <li>Managing state and conditions in games</li>
+</ul>
+
+<h2>🛠️ Future Ideas</h2>
+<ul>
+  <li>Add saving/loading pet state</li>
+  <li>Add sound effects or animations</li>
+  <li>Introduce multiple pets or evolving stages</li>
+</ul>
+
+<hr/>
+
+<h2>👩‍💻 Author</h2>
+<p><strong>Sanskriti</strong> – Java enthusiast & beginner developer learning through building ✨</p>
+
+</body>
+</html>
