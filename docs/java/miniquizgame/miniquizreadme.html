@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Quiz Game - Java</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #eee;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: "✅ ";
+      margin-left: 20px;
+    }
+    .emoji {
+      font-size: 1.3em;
+    }
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Mini Quiz Game in Java</h1>
+
+  <p>A simple console-based <strong>Quiz Game</strong> built in Java using <strong>loops</strong>, <strong>arrays</strong>, and the <code>Scanner</code> class.</p>
+  <p>This game asks multiple-choice questions, checks your answers, and updates your score in real-time!</p>
+
+  <hr>
+
+  <h2>🚀 Features</h2>
+  <ul>
+    <li>5 preset quiz questions with 4 options each</li>
+    <li>Real-time score display after each answer</li>
+    <li>Final score display at the end</li>
+    <li>Beginner-friendly code structure using basic Java concepts</li>
+  </ul>
+
+  <hr>
+
+  <h2>🛠️ Technologies & Concepts Used</h2>
+  <table>
+    <tr>
+      <th>Concept / Method</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td><code>Scanner</code></td>
+      <td>Read input from the user</td>
+    </tr>
+    <tr>
+      <td><code>for</code> loop</td>
+      <td>Iterate through the questions</td>
+    </tr>
+    <tr>
+      <td><code>String[]</code> array</td>
+      <td>Store quiz questions</td>
+    </tr>
+    <tr>
+      <td><code>String[][]</code> 2D array</td>
+      <td>Store multiple options per question</td>
+    </tr>
+    <tr>
+      <td><code>char[]</code> array</td>
+      <td>Store correct answers (A/B/C/D)</td>
+    </tr>
+    <tr>
+      <td><code>charAt(0)</code> method</td>
+      <td>Get the first character from user input</td>
+    </tr>
+    <tr>
+      <td><code>toUpperCase()</code> method</td>
+      <td>Standardize user input for comparison</td>
+    </tr>
+    <tr>
+      <td><code>System.out.println()</code></td>
+      <td>Display output on console</td>
+    </tr>
+    <tr>
+      <td><code>if-else</code> statement</td>
+      <td>Compare user input with correct answer and update score</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h2>📄 Code Structure Overview</h2>
+
+  <h3>✅ <code>main</code> Method</h3>
+  <pre><code>public static void main(String[] args)</code></pre>
+  <p>- Entry point of the program</p>
+
+  <h3>📦 Arrays Used</h3>
+  <pre><code>String[] questions;
+String[][] options;
+char[] answers;
+</code></pre>
+
+  <ul>
+    <li><code>questions[]</code>: Stores all quiz questions</li>
+    <li><code>options[][]</code>: Stores 4 options per question</li>
+    <li><code>answers[]</code>: Stores correct answers in <code>char</code> format</li>
+  </ul>
+
+  <h3>🔁 Loop to Display Questions</h3>
+  <pre><code>for (int i = 0; i &lt; questions.length; i++)</code></pre>
+
+  <h3>🎮 Taking User Input</h3>
+  <pre><code>Scanner scanner = new Scanner(System.in);
+char userAnswer = Character.toUpperCase(scanner.next().charAt(0));</code></pre>
+
+  <h3>🧠 Answer Checking</h3>
+  <pre><code>if (userAnswer == answers[i]) {
+    // Correct!
+} else {
+    // Incorrect
+}</code></pre>
+
+  <hr>
+
+  <h2>📷 Sample Output</h2>
+  <pre>
+Question 1: What is the output of 5 + 3?
+A. 53
+B. 8
+C. Error
+D. None
+Your answer (A/B/C/D): B
+✅ Correct!
+Current Score: 1/1
+...
+🎉 Quiz Over! Your Final Score: 5/5
+  </pre>
+
+  <hr>
+
+  <h2>📦 How to Run the Program</h2>
+  <ol>
+    <li>Save the code in a file named <code>MiniQuizGame.java</code></li>
+    <li>Open terminal/command prompt</li>
+    <li>Compile the Java program:
+      <pre><code>javac MiniQuizGame.java</code></pre>
+    </li>
+    <li>Run the compiled class:
+      <pre><code>java MiniQuizGame</code></pre>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h2>💡 Future Enhancements (Optional)</h2>
+  <ul>
+    <li>Add timer per question</li>
+    <li>Randomize question order using <code>Collections.shuffle()</code></li>
+    <li>Read questions from external <code>.txt</code> or <code>.csv</code> file</li>
+    <li>Add difficulty levels</li>
+    <li>Support multiplayer or scoring leaderboard</li>
+  </ul>
+
+  <hr>
+
+  <h2>👨‍💻 Author</h2>
+  <p><strong>Sanskriti Singh</strong> </p>
+
+  <hr>
+
+  <h2>📁 License</h2>
+  <p>This project is open for educational purposes. Feel free to fork and improve!</p>
+
+</body>
+</html>
