@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer - README</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #d1410c;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #ddd;
+    }
+    a {
+      color: #d1410c;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h1>⏳ Terminal-based Pomodoro Timer</h1>
+
+<p>A simple <strong>command-line Pomodoro Timer</strong> written in Python for improving productivity using the <strong>Pomodoro Technique</strong>. It alternates between work and break sessions, helps reduce burnout, and includes a terminal beep as a reminder.</p>
+
+<hr>
+
+<h2>📚 What is the Pomodoro Technique?</h2>
+<p>The Pomodoro Technique is a <strong>time management method</strong> developed by Francesco Cirillo. It uses a timer to break work into intervals, traditionally:</p>
+<ul>
+  <li><strong>25 minutes</strong> of focused work</li>
+  <li><strong>5 minutes</strong> of break</li>
+  <li>Repeated for 4 cycles</li>
+</ul>
+
+<hr>
+
+<h2>🧠 What This Project Does</h2>
+<ul>
+  <li>Runs in your terminal/command prompt</li>
+  <li>Displays countdown timers for work and break sessions</li>
+  <li>Beeps (<code>\a</code>) when a session ends</li>
+  <li>Loops through 4 full Pomodoro cycles (Work → Break)</li>
+</ul>
+
+<hr>
+
+<h2>🚀 How to Run</h2>
+
+<h3>✅ Requirements</h3>
+<ul><li>Python 3 installed</li></ul>
+
+<h3>▶️ Run the Program</h3>
+<pre><code>python pomodoro.py</code></pre>
+
+<hr>
+
+<h2>🧾 Code Explanation</h2>
+
+<h3>✅ <code>import time</code></h3>
+<p>Used for:</p>
+<ul>
+  <li><code>time.sleep(seconds)</code>: Pauses the program for the given number of seconds to create a countdown effect.</li>
+</ul>
+
+<h3>✅ <code>def format_time(seconds)</code></h3>
+<p><strong>Purpose:</strong> Converts total seconds to a readable format like <code>mm:ss</code>.</p>
+
+<pre><code>def format_time(seconds):
+    mins = seconds // 60
+    secs = seconds % 60
+    return f"{mins:02d}:{secs:02d}"</code></pre>
+
+<p>Example: <code>format_time(150)</code> returns <code>02:30</code></p>
+
+<h3>✅ Timer Settings</h3>
+<pre><code>work_duration = 25 * 60
+break_duration = 5 * 60
+cycles = 4</code></pre>
+
+<p>You can change these values for quick testing (e.g. <code>work_duration = 5</code> for 5 seconds).</p>
+
+<h3>✅ The Loop: Running Pomodoro Cycles</h3>
+<pre><code>for cycle in range(1, cycles + 1):</code></pre>
+<p>Runs the work + break cycle <strong>4 times</strong>.</p>
+
+<h3>✅ Work Timer</h3>
+<pre><code>for remaining in range(work_duration, 0, -1):
+    print(f"Work: {format_time(remaining)}", end='\r')
+    time.sleep(1)</code></pre>
+
+<h3>✅ Break Timer</h3>
+<p>Same as work timer but uses <code>break_duration</code>.</p>
+
+<h3>✅ Terminal Beep</h3>
+<pre><code>print("\a")</code></pre>
+<p>This plays the <strong>bell sound</strong> in the terminal.</p>
+
+<hr>
+
+<h2>🎨 Output Example</h2>
+<pre><code>Pomodoro Cycle 1 - Work Time!
+Work: 24:59
+Work: 24:58
+...
+
+Time to take a break! 🔔
+Break: 04:59
+Break: 04:58
+...
+
+Break over! Get ready to work again.</code></pre>
+
+<hr>
+
+<h2>✅ Features Summary</h2>
+
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Timer Format</td>
+    <td>Countdown in mm:ss format</td>
+  </tr>
+  <tr>
+    <td>Terminal Refresh</td>
+    <td>Clean, single-line updates</td>
+  </tr>
+  <tr>
+    <td>Sound Alert</td>
+    <td>Terminal bell <code>\a</code> at session end</td>
+  </tr>
+  <tr>
+    <td>Cycles</td>
+    <td>4 repeated Pomodoro sessions</td>
+  </tr>
+  <tr>
+    <td>Beginner-Friendly</td>
+    <td>No external libraries, pure Python</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>🧪 Customize It!</h2>
+
+<table>
+  <tr>
+    <th>What you want to change</th>
+    <th>How to do it</th>
+  </tr>
+  <tr>
+    <td>Shorter testing times</td>
+    <td>Change <code>work_duration</code> and <code>break_duration</code> to smaller numbers</td>
+  </tr>
+  <tr>
+    <td>More Pomodoros</td>
+    <td>Change the value of <code>cycles</code></td>
+  </tr>
+  <tr>
+    <td>Add long breaks</td>
+    <td>Add a longer break after 4 cycles</td>
+  </tr>
+  <tr>
+    <td>Add GUI or sound files</td>
+    <td>Use libraries like <code>tkinter</code> or <code>playsound</code></td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>🙌 Contribution Ideas</h2>
+<ul>
+  <li>Add a longer break after 4 cycles</li>
+  <li>Create a GUI with Tkinter or PyQt</li>
+  <li>Log session stats to a text file</li>
+  <li>Use <code>playsound</code> for custom audio alerts</li>
+</ul>
+
+<hr>
+
+<h2>📃 License</h2>
+<p>This project is open-source and free to use for personal productivity!</p>
+
+<p><a href="https://github.com/itirksnasingh/pomodoro" target="_blank">📂 GitHub</a></p>
+
+</body>
+</html>
